@@ -64,10 +64,14 @@ letter-spacing: -0.05vh;
 .coveropacity{
     opacity: 0.1
 }
-.cover_1{background-image: url(img/1.png)}
-.cover_2{background-image: url(img/2.png)}
-.cover_3{background-image: url(img/3.png)}
-.cover_4{background-image: url(img/4.png)}
+.cover_1{background-image: url(img/1.png);
+        display: block !important}
+.cover_2{background-image: url(img/2.png);
+        pointer-events: none;}
+.cover_3{background-image: url(img/3.png);
+        pointer-events: none;}
+.cover_4{background-image: url(img/4.png);
+        pointer-events: none;}
 .red{
 	width: calc(100vw - 7.5vh);
 	height: calc(100vh - 7.5vh);
