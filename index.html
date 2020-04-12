@@ -155,8 +155,8 @@ padding:0;}
             var counter = 0
             function repeatOften() {
                 counter++
-                $('.cover').hide()
-                $('.cover_'+((counter%4)+1)).show()
+                $('.cover').css({'opacity':0})
+                $('.cover_'+((counter%4)+1)).css({'opacity':1})
                 setTimeout(function(){repeatOften()},500)
             }
             repeatOften()
