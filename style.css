@@ -247,7 +247,7 @@ opacity: 1
 }
 
 .logo_wrap {
-    position: absolute;
+    position: fixed;
     top: 90vh;
     padding-top: 2vh;
     /* height: 3vh; */
