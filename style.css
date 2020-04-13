@@ -177,10 +177,12 @@ opacity: 1
 }
 
 .popup_content .korean{
-    font-size: 5.9vw !important;
     display: inline;
-    line-height: 1.47;
-    word-break: keep-all;
+    font-size: 3.4vh !important;
+    line-height: 1.45;
+    padding-right: 3vh;
+    padding-left: 3vh;
+    width: 100%;
 }
 .participent_wrapper{
     width: 100%;
@@ -368,6 +370,12 @@ z-index: 1000000000;
 height: 12vw;}
 .popup_wrapper{
 top: 9vw;}
+.popup_content .korean{
+    font-size: 5.9vw !important;
+    display: inline;
+    line-height: 1.47;
+    word-break: keep-all;
+}
 
 
 }
