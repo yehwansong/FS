@@ -35,7 +35,7 @@ letter-spacing: -0.05vh;
 
 }
 
-.logo{
+.logo_v{
     position: fixed;
     z-index: 10000;
     right: 15px;
@@ -242,19 +242,141 @@ opacity: 1
 .fsss_button:hover{
     opacity: 0.5
 }
+.logo_wrap .title {
+    font-size: 1.4vh !important;
+}
+
+.logo_wrap {
+    position: absolute;
+    top: 90vh;
+    padding-top: 2vh;
+    /* height: 3vh; */
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    left: 3vh;
+}
+.whole_logo {
+    background-color: #f1f1f1 !important;
+    transition: opacity 1s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(logo/fs.svg);
+    background-size: auto 96vh;
+    background-repeat: no-repeat;
+    background-position: center 2vh;
+    z-index: 1000000000000000000000000000000000000000;
+    pointer-events: none;
+}
+
+.whole_logo_out {
+    opacity: 0
+}
+
+.logo {
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 10vh;
+    height: 5.5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: 2vh;
+    position: relative;
+    float: left;
+    /*opacity: 0.7*/
+}
+
+.logo_title {
+    text-transform: uppercase;
+    top: 0;
+    position: absolute;
+    width: auto;
+}
+
+.logo_title_2 {
+    padding-left: 15vh
+}
+
+.logo_1 {
+    width: 10vh;
+    background-image: url('logo/1.png');
+    margin-right: 5vh;
+}
+
+.logo_2 {
+    background-image: url(logo/2.png);
+    height: 6vh;
+    margin-top: -0.25vh;
+    width: 8.5vh;
+    margin-right: 3vh;
+}
+
+.logo_3 {
+    background-image: url('logo/3.png');
+    width: 13vh;
+}
+
+.logo_4 {
+    background-image: url('logo/4.png');
+    width: 13vh;
+}
 @media (max-aspect-ratio: 1/1) {
 .fsss_button{
 position: fixed;
 top: 0;
 z-index: 100000;
 font-size: 8vw !important;
-left: 8vw;
-bottom: 8vw;
+left: 2vw;
+bottom: 24vw;
 text-decoration: none;
 line-height: 1.1;
 color: #e30612;
 top: auto;
 }
+.logo_wrap{
+    bottom: 0;
+    top: auto;
+position: fixed;
+padding-top: 2vh;
+/* height: 3vh; */
+box-sizing: border-box;
+overflow: hidden;
+width: 100%;
+left: 2vw;
+}
+.logo {
+/* margin-left: 1vw; */
+width: 13vw;
+top: 0;
+left: 0;
+display: flex;
+width: 18vw;
+height: 5.5vh;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: left center;
+margin-right: 2vw;
+position: relative;
+float: left;
+/* opacity: 0.7; */
+}
+.logo_1{
+margin-right: 10vw}
+.logo_2{
+    margin-top: 0
+}
+.logo_title_2 {
+padding-left: 28vw;
+}
+.logo_3{
+margin-right: 3.5vw;}
+.logo_3,.logo_4{
+width: 20vw !important;}
     .menu{
         display: block;
         background-image: url(img/menu.svg);
@@ -348,7 +470,7 @@ top: 0;
     .popup_content{
 font-size: 6.2vw !important;
 padding-top: 9vw;}
-    .logo{
+    .logo_v{
 right: 0vw;
 /* bottom: 15px; */
 top: 2vw;

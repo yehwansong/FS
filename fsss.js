@@ -704,12 +704,12 @@ function people_interaction(){
 	function set_content(){
 			if (window.location.hash === '#kr' || window.location.hash === '#kr_m'){
 				$('.content_wrapper').html(' ')
-				$('.content_wrapper').append($('.side_3.wrap_1 .content').clone());
+				$('.content_wrapper').append($('.side_3.wrap_2 .content').clone());
 				$('.content_wrapper').removeClass('content_wrapper_en')
 				$('.content_wrapper').addClass('content_wrapper_kr')
 			}else{
 				$('.content_wrapper').html(' ')
-				$('.content_wrapper').append($('.side_1.wrap_1 .content').clone());
+				$('.content_wrapper').append($('.side_1.wrap_2 .content').clone());
 				$('.content_wrapper').removeClass('content_wrapper_kr')
 				$('.content_wrapper').addClass('content_wrapper_en')
 			}
