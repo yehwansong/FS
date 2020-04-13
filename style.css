@@ -177,7 +177,6 @@ opacity: 1
 }
 
 .popup_content .korean{
-    display: inline;
     font-size: 3.4vh !important;
     line-height: 1.45;
     padding-right: 3vh;
@@ -372,7 +371,6 @@ height: 12vw;}
 top: 9vw;}
 .popup_content .korean{
     font-size: 5.9vw !important;
-    display: inline;
     line-height: 1.47;
     word-break: keep-all;
 }
