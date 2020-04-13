@@ -21,6 +21,9 @@ padding:0;}
     background-repeat: no-repeat;
     height: 90vh;
 }
+.out{
+    opacity: 0.05 !important
+}
 </style>
 </head>
 <body>
@@ -91,9 +94,9 @@ padding:0;}
             var button_open = false
             $('.about_button').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':'0.05'})
-                $('.logo').css({'opacity':'0.05'})
-                $('.fsss_button').css({'opacity':'0.05'})
+                $('.cover').addClass('out')
+                $('.logo').addClass('out')
+                $('.fsss_button').addClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
@@ -102,9 +105,9 @@ padding:0;}
             })
             $('.exhibition_button').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':'0.05'})
-                $('.logo').css({'opacity':'0.05'})
-                $('.fsss_button').css({'opacity':'0.05'})
+                $('.cover').addClass('out')
+                $('.logo').addClass('out')
+                $('.fsss_button').addClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
@@ -112,9 +115,9 @@ padding:0;}
             })
             $('.participent_button').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':'0.05'})
-                $('.logo').css({'opacity':'0.05'})
-                $('.fsss_button').css({'opacity':'0.05'})
+                $('.cover').addClass('out')
+                $('.logo').addClass('out')
+                $('.fsss_button').addClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
@@ -123,9 +126,9 @@ padding:0;}
             })
             $('.program_button').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':'0.05'})
-                $('.logo').css({'opacity':'0.05'})
-                $('.fsss_button').css({'opacity':'0.05'})
+                $('.cover').addClass('out')
+                $('.logo').addClass('out')
+                $('.fsss_button').addClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
@@ -134,9 +137,9 @@ padding:0;}
             })
             $('.archive_button').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':'0.05'})
-                $('.logo').css({'opacity':'0.05'})
-                $('.fsss_button').css({'opacity':'0.05'})
+                $('.cover').addClass('out')
+                $('.logo').addClass('out')
+                $('.fsss_button').addClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
@@ -145,9 +148,9 @@ padding:0;}
             })
             $('.whole_title span').click(function(){
                 button_open = true
-                $('.cover').css({'opacity':1})
-                $('.logo').css({'opacity':'1'})
-                $('.fsss_button').css({'opacity':'1'})
+                $('.cover').removeClass('out')
+                $('.logo').removeClass('out')
+                $('.fsss_button').removeClass('out')
                 $('.underline').removeClass('underline')
                 $(this).addClass('underline')
                 $('.popup_open').removeClass('popup_open')
