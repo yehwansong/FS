@@ -608,7 +608,9 @@ a {
     width: 100%;
     height: auto;
 }
-
+.content_wrapper_kr .popup{
+    top: 80.5vh;
+}
 .contents {
     text-align: left !important;
 }
