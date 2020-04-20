@@ -71,7 +71,7 @@ body {
 }
 
 .b_f {
-    font-size: 3.6vh !important;
+    font-size: 4.1vh !important;
 }
 
 .content_wrapper_kr .b_f,
@@ -96,7 +96,7 @@ body {
 }
 
 .whole_title {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     text-transform: none;
     text-align: left !important;
@@ -106,10 +106,14 @@ body {
 }
 
 .whole_title span {
-    line-height: 1.2;
-    font-size: 2vh;
     display: inline-block;
     width: auto;
+    font-size: 5vh;
+    width: 100vw;
+    letter-spacing: -0.15vh;
+    line-height: 1;
+    /* margin-left: 44vw; */
+    text-align: center;
 }
 
 .whole_title .tag {
@@ -143,13 +147,13 @@ body {
     float: left;
     padding-right: 0vh;
     padding-left: 0vh;
-    padding-top: 4vh;
     position: relative;
 }
 
 .info {
     /*text-align: center;*/
     padding-top: 4vh;
+    padding-bottom: 10vh;
     /* width: 50%; */
     /*padding-left: 10%;*/
     /*padding-right: 10%;*/
@@ -159,7 +163,6 @@ body {
     position: relative;
     line-height: 1.1;
     padding-left: 4vh;
-    margin-top: -2vh;
     letter-spacing: -0.02vh;
 }
 
@@ -171,7 +174,6 @@ body {
 .menifesto .title {
     left: 0;
     position: absolute;
-    padding-top: 2vh;
 }
 
 .info * {
@@ -218,7 +220,10 @@ body {
     width: 100%;
     column-count: 2;
 }
-
+#content_wrapper>.content{
+    transform:none !important;
+    margin-top: 0 !important
+}
 .right {
     width: 30%;
     float: left;
@@ -227,7 +232,9 @@ body {
     padding-right: 0vh;
     /*padding-top: 4vh*/
 }
-
+.topinfo{
+    padding-right: 5%;
+    padding-left: 5%;}
 .whole {
     /*opacity: 1 !important;*/
     /*transform: scale(0.3) rotateX(20deg) rotateY(-15deg) !important;*/
@@ -288,8 +295,8 @@ body {
     left: 0;
     top: 0;
     /*display: flex;*/
-    padding-left: calc(50vw - 81vh);
-    padding-right: calc(50vw - 81vh);
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -577,7 +584,7 @@ a {
     left: 0;
     bottom: 0;
     top: 0vh;
-    padding-left: calc(50vw - 81vh);
+    padding-left: 1vw;
 }
 
 .people_hover {
@@ -585,7 +592,7 @@ a {
 }
 
 .popup {
-    top: 56vh;
+    top: 92vh;
     position: relative;
     display: none;
     /* padding-right: calc(50vw - 81vh + 40%); */
@@ -616,7 +623,7 @@ a:hover {
 
 .logo_wrap {
     position: absolute;
-    top: 92vh;
+    bottom:0vh;
     padding-top: 2vh;
     /* height: 3vh; */
     box-sizing: border-box;

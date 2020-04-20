@@ -631,6 +631,7 @@ function people_interaction(){
 				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
 				$('.whole').css({'transform':'rotateY(-90deg)'})
+				$('.content_wrapper_kr>.content').css({'transform':'translateX(0px)'})
 			 	trans_array_pre = [0,-90]
 		}else{
 				location.replace(window.location.href.split('#')[0]+'#kr_m');
