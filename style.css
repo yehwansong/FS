@@ -128,7 +128,6 @@ opacity: 1
     padding-left: 7.5vh;
     float: left;
 }
-
 .verspace{
     display: block;
     width: 100%;
@@ -349,6 +348,7 @@ overflow: hidden;
 width: 100%;
 left: 2vw;
 }
+
 .logo {
 /* margin-left: 1vw; */
 width: 13vw;
