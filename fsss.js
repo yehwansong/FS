@@ -26,8 +26,11 @@ $(document).ready(function(){
 	}
 	match_height()
 	function match_height(){
+		console.log('her')
 		$('#content_wrapper .right').css({'height': Math.max($('#content_wrapper .left').outerHeight(),$('#content_wrapper .right').outerHeight()) +'px'})
 		$('#content_wrapper .left').css({'height': Math.max($('#content_wrapper .left').outerHeight(),$('#content_wrapper .right').outerHeight()) +'px'})
+		$('#content_wrapper_kr .right').css({'height': Math.max($('#content_wrapper .left').outerHeight(),$('#content_wrapper .right').outerHeight()) +'px'})
+		$('#content_wrapper_kr .left').css({'height': Math.max($('#content_wrapper .left').outerHeight(),$('#content_wrapper .right').outerHeight()) +'px'})
 	}
 
 
@@ -706,6 +709,7 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 			return false
 	})
 	$('.close').click(function(){
+		console.log('sdf')
 		popup = false
 			$('.people_hover').removeClass('people_hover')
 			$('.popup').hide()
