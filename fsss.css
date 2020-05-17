@@ -129,6 +129,7 @@ body {
     white-space: nowrap;
     width: 100%;
     padding-bottom: 1vh;
+    letter-spacing: -0.2vh;
 }
 /*.title_span_1 {
     letter-spacing: 0 !important;
@@ -154,7 +155,7 @@ body {
     -webkit-text-stroke: 0;
     padding-bottom: 0;
     top: .5vh;
-    left: 81vh;
+    left: 77vh;
 }
 
 .content * {
