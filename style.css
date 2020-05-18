@@ -79,26 +79,6 @@ a{text-decoration: none !important}
     opacity: 0.1
 }
 
-.cover_1 {
-    background-image: url(img/1.png);
-}
-
-.cover_2 {
-    background-image: url(img/2.png);
-}
-
-.cover_3 {
-    background-image: url(img/3.png);
-}
-
-.cover_4 {
-    background-image: url(img/4.png);
-}
-
-.cover_5 {
-    background-image: url(img/5.png);
-}
-
 .title {
     text-transform: uppercase;
     font-size: 3vh !important;
@@ -362,21 +342,6 @@ a{text-decoration: none !important}
     display: none !important;
 }
 @media (max-aspect-ratio: 1/1) {
-.cover_1 {
-    background-image: url(img/m_1.png);
-}
-
-.cover_2 {
-    background-image: url(img/m_2.png);
-}
-
-.cover_3 {
-    background-image: url(img/m_3.png);
-}
-
-.cover_4 {
-    background-image: url(img/m_4.png);
-}
     html, body,.cover_wrapper{
         height: 100%
     }

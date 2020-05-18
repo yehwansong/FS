@@ -25,6 +25,14 @@ padding:0;}
 .out{
     opacity: 0.01 !important
 }
+#img_1,
+#img_2,
+#img_3,
+#img_4,
+#img_5{
+    position: fixed;
+    opacity: 0
+}
 </style>
 </head>
 <body>
@@ -34,6 +42,11 @@ padding:0;}
     $(document).ready(function() {
     });
     </script>
+    <img id="img_1">
+    <img id="img_2">
+    <img id="img_3">
+    <img id="img_4">
+    <img id="img_5">
     <div class="wrapper">
         <div class="content content_1">
             <span class="english">
@@ -166,7 +179,52 @@ padding:0;}
 
         })
         $('document').ready(function(){
-            repeatOften()
+                var imagecounter = 0
+if(w/h>1){
+    $('#img_1').attr('src', 'img/1.png').on('load', function() {
+   $(this).remove()
+    $('#img_2').attr('src', 'img/2.png').on('load', function() {
+   $(this).remove()
+    $('#img_3').attr('src', 'img/3.png').on('load', function() {
+   $(this).remove()
+    $('#img_4').attr('src', 'img/4.png').on('load', function() {
+   $(this).remove()
+    $('#img_5').attr('src', 'img/5.png').on('load', function() {
+   $(this).remove()
+       $('.cover_1').css('background-image', 'url(img/1.png)');
+       $('.cover_2').css('background-image', 'url(img/2.png)');
+       $('.cover_3').css('background-image', 'url(img/3.png)');
+       $('.cover_4').css('background-image', 'url(img/4.png)');
+       $('.cover_5').css('background-image', 'url(img/5.png)');
+       repeatOften(5)
+    }); 
+    });
+    });
+    });
+    });
+}else{
+    $('#img_1').attr('src', 'img/m_1.png').on('load', function() {
+   $(this).remove()
+    $('#img_2').attr('src', 'img/m_2.png').on('load', function() {
+   $(this).remove()
+    $('#img_3').attr('src', 'img/m_3.png').on('load', function() {
+   $(this).remove()
+    $('#img_4').attr('src', 'img/m_4.png').on('load', function() {
+   $(this).remove()
+   $('#img_5').remove()
+        $('.cover_1').css('background-image', 'url(img/m_1.png)');
+        $('.cover_2').css('background-image', 'url(img/m_2.png)');
+        $('.cover_3').css('background-image', 'url(img/m_3.png)');
+        $('.cover_4').css('background-image', 'url(img/m_4.png)');
+        repeatOften(4)
+    }); 
+    });
+    });
+    });
+}
+
+
+
             var mobile_menu = false
             $('.menubutton_mobile').click(function(){
                 if(!mobile_menu){
@@ -192,16 +250,11 @@ padding:0;}
             })
             var counter = 0
             var rotatetime 
-            if(w/h>1){
-                rotatetime = 5
-            }else{
-                rotatetime = 4
-            }
-            function repeatOften() {
+            function repeatOften(rotatetime) {
                 counter++
                 $('.cover').css({'opacity':0})
                 $('.cover_'+((counter%rotatetime)+1)).css({'opacity':1})
-                setTimeout(function(){repeatOften()},700)
+                setTimeout(function(){repeatOften(rotatetime)},700)
             }
             $('.korean_b').click(function(){
                 $('.korean').show()
