@@ -700,6 +700,8 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 			popup = true
 			$('.popup').hide()
 			$('.popup_en.popup_'+$(this).index()/2).show()
+			console.log($('.popup_en.popup_'+$(this).index()/2))
+			console.log('.popup_en.popup_'+$(this).index()/2)
 			return false
 	})
 	$('#content_wrapper_kr .people_wrap .people_elem').click(function(){
