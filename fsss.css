@@ -805,6 +805,10 @@ transform: translateZ(100000vh);
 }
 @media (max-aspect-ratio: 7/9) {
 
+.popup_wrap {
+    padding-left: 0vw;
+    left: 0vw;
+}
 
 
     #content_wrapper_kr *,
@@ -813,9 +817,7 @@ font-size: 4vw;}
     #content_wrapper_kr *,
 .kr_m *{
     line-height: 1.5;
-
 }
-.contents{background: rgb(244, 244, 244)}
 .popup .contents {
 letter-spacing: -0.2vw;
 font-size: 6.7vw;
@@ -831,7 +833,7 @@ line-height: 1.3;
 font-size: 5.8vw;
 line-height: 1.4;}
 .topinfo {
-padding-left: 4vw;
+padding-left: 0.5vw;
 }
 .kr_m .b_f{
 font-size: 7vw !important;
@@ -941,7 +943,7 @@ padding-right: 0 !important;
 padding-top: 0vw !important;
     }
     .content>.whole_title{top: 0;
-padding-left: 3.5vw !important;
+padding-left: 0vw !important;
 padding-top: 3vw !important;}
     .menifesto {
         font-size: 3.8vh !important;
