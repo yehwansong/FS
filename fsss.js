@@ -59,13 +59,15 @@ $(document).ready(function(){
 	if(isMobile){
 				if(window.location.hash === '#kr_m'){
 		    		$('body').addClass('kr_m')
+					$('.lang_kr').hide()
+					$('.lang_en').show()
 		    	}
 		$(".left>*").unwrap();
 		$(".right>*").unwrap();
 		// $(".info").insertAfter(".transborderlab");
 		$("#content_wrapper .info").insertAfter("#content_wrapper .transborderlab");
 		$("#content_wrapper_kr .info").insertAfter("#content_wrapper_kr .transborderlab");
-		// $(".logo_wrap").insertAfter(".info");
+		// $(".logo_wrap").insertAfter(".people");
 		// $('.whole').css({'opacity':'0'})
 		// $('.content_wrapper').css({'opacity':'1'})
 		console.log('hey')
@@ -194,6 +196,7 @@ $(document).ready(function(){
 
 	  	$('.whole .side_3 .content .maintitle').css({'margin-top':this.scrollY+'px'})
 	  	$('.whole .side_3.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
+
 		if(orig_w> orig_h){
 			w = orig_w
 			h = orig_w
@@ -381,10 +384,15 @@ $(document).ready(function(){
 			}else{
 				console.log('---------------------')
 				console.log(h)
+	  	if(isMobile){
+	  		$('.whole .side_1.wrap.wrap_1.extra .content .maintitle').css({'margin-top':this.scrollY+'px'})
+	  	}
 		var h = h*1.2
 				$('.side_1.wrap_1').css({'width':r_x + 'px'})
 				$('.side_1.wrap_1').css({'height':r_y/2 + 'px'})
 				$('.side_1.wrap_1').css({'top':r_y/2 + 'px'})
+				$('.side_1.wrap_1 .content').css({'transform':'translateY('+(-1*r_y/2) + 'px)'})
+				$('.side_1.wrap_1.extra .content').css({'transform':'translateY(0px)'})
 				$('.side_1.wrap_2').css({'width':w - r_x + 'px'})
 				$('.side_1.wrap_2').css({'height':r_y + 'px'})
 				$('.side_1.wrap_2').css({'left':r_x + 'px'})

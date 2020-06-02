@@ -735,7 +735,7 @@ a:hover {
     width: auto;
 }
 .logo_title_2 {
-    padding-left: 12vh
+    padding-left: 26vw
 }
 .logo_1 {
     width: 10vh;
@@ -842,14 +842,28 @@ a:hover {
         left: 0vw;
     }
     .maintitle a, .maintitle span,
-    #content_wrapper_kr *,
     .content * {
         font-size: 5vw;
         letter-spacing: -0.1vw;
     }
+#content_wrapper_kr *,
+    .kr_m *{
+    font-size: 4.5vw;
+    line-height: 1.33
+}
+
+.kr_m .menifesto, #content_wrapper_kr .menifesto, .content_wrapper_kr .menifesto {
+    font-size: 5.5vw !important;
+    line-height: 1.5 !important;
+    font-weight: 400;
+}
+.side_3 .title, #content_wrapper_kr .title, .side_3 .maintitle{
+background:  #eaeaea
+
+}
     #content_wrapper_kr *,
     .kr_m * {
-        line-height: 1.5;
+        line-height: 1.6;
     }
     .popup .contents {
         padding-left: 1vw;
@@ -870,10 +884,6 @@ a:hover {
     }
     .topinfo {
         padding-left: 0.5vw;
-    }
-    .kr_m .b_f {
-        font-size: 7vw !important;
-        letter-spacing: -0.2vw;
     }
     .side_2 .content {
         background-image: url('bg_1_m.jpg') !important;
@@ -958,8 +968,7 @@ a:hover {
     .people {
         column-count: 1 !important;
         padding-bottom: 20vw !important;
-    }
-    #content_wrapper_kr .people_wrap>span,
+    } d
     .people_wrap>span {
         line-height: 1.3;
         font-size: 6vw;
@@ -971,6 +980,11 @@ a:hover {
         font-weight: 400;
         /*text-align: center;*/
     }
+    #content_wrapper_kr .people_wrap>span, .people_wrap>span, .kr_m .people_wrap>span {
+    line-height: 1.3;
+    font-size: 5.8vw;
+    line-height: 1.4;
+}
     .info {
         /*padding-bottom: 45vh !important;*/
     }
@@ -991,13 +1005,22 @@ margin-left: -10vw;
 padding-bottom: 0vh;
 /* padding-top: 4vw; */
 /* padding-bottom: 3vw; */
-margin-top: 0 !important;
+margin-top: 3vw !important;
 /* padding: 10vw; */
 width: 100vw;
+    }
+    .logo_title{
+        text-align: left;
+    }
+    .logo_title_2{
+        /*text-indent: 20vw*/
+    }
+    .whole_title{
     }
     .menifesto .title {
         transform: translateX(0vw);
         width: 105vw;
+
     }
     .content>div {
         margin-left: 0 !important;
@@ -1015,6 +1038,7 @@ width: 100vw;
         top: 0;
         padding-left: 0vw !important;
         padding-top: 3vw !important;
+        margin-top: 0 !important
     }
     .menifesto {
     font-size: 3.8vh !important;
@@ -1051,29 +1075,19 @@ letter-spacing: -0.2vw !important;
         -webkit-text-stroke: 0;
         padding-bottom: 0;
     }
-    .b_f {
-        font-size: 3.3vh !important;
-        font-size: 7vw !important;
-        line-height: 1.05;
-    }
-    .kr_m .b_f {
-        font-size: 3vh !important;
-        /*line-height: 1.4 !important;*/
-        
-        font-weight: 400;
-    }
-    .kr_m .menifesto.b_f {
-        font-size: 2.8vh !important;
-        line-height: 1.4 !important;
-        font-weight: 400;
-    }
     .logo_wrap {
         bottom: 0;
         top: auto;
         height: 12.5vh;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .logo_wrap .title{
+    margin-left: 4vw;
+        background:none  !important;
     }
     .logo {
-        margin-top: 12.25vw !important;
+        margin-top: 10vw !important;
     }
     .whole_logo {
         display: none;
@@ -1136,9 +1150,9 @@ letter-spacing: -0.2vw !important;
     .logo_2,
     .logo_3,
     .logo_4 {
-        width: 19.5vw;
-        margin-right: 4vw;
-        height: 10vw
+    width: 19.5vw;
+    margin-left: 4vw;
+    margin-right: 0;
     }
     .logo_1 {
         height: 10vw !important;
@@ -1146,8 +1160,9 @@ letter-spacing: -0.2vw !important;
     .logo_2 {
         background-image: url(logo/2.png);
         height: 5vh;
-        margin-top: 12.25vw !important;
+        margin-top: 10vw !important;
         width: 15vw !important;
+        margin-left: 7vw;
     }
     .logo_4 {
         margin-right: 0
@@ -1184,7 +1199,7 @@ letter-spacing: -0.2vw !important;
 .maintitle span {
     width: auto;
     background: white;
-    line-height: 1;
+    line-height: 1 !important;
     margin-top: 1vw;
     margin-left: 1vh;
     font-size: 2.2vh;
