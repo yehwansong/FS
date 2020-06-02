@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+		var h = window.innerHeight
 		var w = window.innerWidth
 	// browser
 	var isMobile = false;
@@ -87,6 +88,9 @@ $(document).ready(function(){
 			$('.whole').css({'transform':'rotateY(-90deg)'}) 
 			$('#content_wrapper').hide()
 			$('#content_wrapper_kr').show()
+
+					$('.lang_kr').hide()
+					$('.lang_en').show()
 		}else{
 		}
 	}
@@ -185,6 +189,11 @@ $(document).ready(function(){
 	window.addEventListener("scroll", function(event) {
 	  	$('.whole .side_1 .content').css({'margin-top':-1*this.scrollY+'px'})
 	  	$('.whole .side_3 .content').css({'margin-top':-1*this.scrollY+'px'})
+	  	$('.whole .side_1 .content .maintitle').css({'margin-top':this.scrollY+'px'})
+	  	$('.whole .side_1.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
+
+	  	$('.whole .side_3 .content .maintitle').css({'margin-top':this.scrollY+'px'})
+	  	$('.whole .side_3.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
 		if(orig_w> orig_h){
 			w = orig_w
 			h = orig_w
@@ -729,6 +738,8 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 			location.replace(window.location.href.split('#')[0]+'#en');
 			$('.whole').addClass('animate')
 			$('.whole').css({'transform':'rotateY(0)'})
+			$('.lang_kr').show()
+			$('.lang_en').hide()
 		}else{
 			location.replace(window.location.href.split('#')[0]+'#en_m');
 			location.reload();
@@ -738,6 +749,8 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 		if(!isMobile){
 			$('#content_wrapper').hide()
 			$('#content_wrapper_kr').show()
+			$('.lang_kr').hide()
+			$('.lang_en').show()
 			location.replace(window.location.href.split('#')[0]+'#kr');
 			$('.whole').addClass('animate')
 				r_x = orig_w/2
