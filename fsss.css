@@ -159,7 +159,9 @@ body {
     text-transform: none;
     /* text-align: left !important; */
     top: 0;
-    padding-bottom: 1vh !important;
+    padding-bottom: 0.5vh !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 
@@ -231,6 +233,8 @@ body {
     width: 100%;
     padding-bottom: 0vh;
     text-align: center;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 .side_3 .title,
 #content_wrapper_kr .title,
@@ -241,7 +245,8 @@ body {
 
 }
 .logo_wrap .title {
-    font-size: 1.2vh;
+    font-size: 1.5vh;
+    background: none
 }
 
 .left {
@@ -257,7 +262,7 @@ body {
 
 .info {
     /*text-align: center;*/
-    padding-top: 4vh;
+    /*padding-top: 4vh;*/
     padding-bottom: 10vh;
     /* width: 50%; */
     /*padding-left: 10%;*/
@@ -294,7 +299,8 @@ body {
 }
 .info .b_f {
     letter-spacing: -0.1vh;
-    font-size: 3.5vh !important
+    font-size: 3.5vh !important;
+    line-height: 1.2 !important;
 }
 .transborderlab,
 .objective,
@@ -302,7 +308,7 @@ body {
 .location,
 .apply {
     width: 100%;
-    padding-bottom: 2.5vh;
+    /*padding-bottom: 2.5vh;*/
 }
 .popup .contents {
     letter-spacing: -0.03vh;
@@ -721,39 +727,38 @@ a:hover {
 .logo {
     display: flex;
     width: 10vh;
-    height: 3.5vh;
+    height: 7.5vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
     margin-right: 2vh;
-    /*opacity: 0.7*/
 }
 .logo_title {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     top: 0;
     position: absolute;
     width: auto;
 }
 .logo_title_2 {
-    padding-left: 26vw
+    padding-left: 14vh;
 }
 .logo_1 {
-    width: 10vh;
-    background-image: url('logo/1.png');
+    width: 12vh;
+    background-image: url(logo/1.png);
 }
 .logo_2 {
     background-image: url(logo/2.png);
-    height: 5vh;
-    margin-top: -0.75vh;
-    width: 7.5vh;
+    height: 7.5vh;
+    margin-top: 0vh;
+    width: 11.5vh;
 }
 .logo_3 {
-    background-image: url('logo/3.png');
+    background-image: url(logo/3.png);
     width: 12vh;
 }
 .logo_4 {
-    background-image: url('logo/4.png');
-    width: 12vh;
+    background-image: url(logo/4.png);
+    width: 20vh;
 }
 #location_button,
 #apply_button,
@@ -768,6 +773,21 @@ a:hover {
 }
 #apply_button {
     width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    border-bottom: 0;
+    border-radius: 0.4vh;
+    height: 4.8vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    transition: 0.3s
+}
+.side_3 #apply_button {
+    background: #ff4446;
+    }
+.side_3 #apply_button:hover{
+    background: white;
 }
 .lang_wrap div {
     background: white;
@@ -968,7 +988,7 @@ background:  #eaeaea
     .people {
         column-count: 1 !important;
         padding-bottom: 20vw !important;
-    } d
+    } 
     .people_wrap>span {
         line-height: 1.3;
         font-size: 6vw;
@@ -1011,10 +1031,9 @@ width: 100vw;
     }
     .logo_title{
         text-align: left;
-    }
-    .logo_title_2{
-        /*text-indent: 20vw*/
-    }
+    }.logo_title_2 {
+    padding-left: 26vw;
+}
     .whole_title{
     }
     .menifesto .title {
