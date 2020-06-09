@@ -907,7 +907,7 @@ background:  #eaeaea
     }
     .side_2 .content {
         background-image: url('bg_1_m.jpg') !important;
-        background-size: cover !important;
+        background-size: contain !important;
         background-position: center !important;
         height: 100vh;
     }

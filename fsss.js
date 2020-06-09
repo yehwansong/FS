@@ -192,7 +192,7 @@ $(document).ready(function(){
 	  	$('.whole .side_1 .content').css({'margin-top':-1*this.scrollY+'px'})
 	  	$('.whole .side_3 .content').css({'margin-top':-1*this.scrollY+'px'})
 	  	$('.whole .side_1 .content .maintitle').css({'margin-top':this.scrollY+'px'})
-	  	$('.whole .side_1.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
+	  	// $('.whole .side_1.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
 
 	  	$('.whole .side_3 .content .maintitle').css({'margin-top':this.scrollY+'px'})
 	  	$('.whole .side_3.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
@@ -220,6 +220,7 @@ $(document).ready(function(){
 	src = document.getElementById('content_wrapper')
 		}
 	src.addEventListener('touchstart', function(e) {
+		h = window.innerHeight
 	  	clientX = e.touches[0].clientX;
 	  	clientY = e.touches[0].clientY;
 	  	start(clientX, clientY)
@@ -328,44 +329,40 @@ $(document).ready(function(){
 				kr_pivot = -1*r_y
 				$('.wrap_1').css({'width':r_x + 'px'})
 				$('.wrap_1').css({'height':r_y + 'px'})
+				$('.wrap_2').css({'width':w - r_x + 'px'})
+				$('.wrap_2').css({'height':r_y + 'px'})
+				$('.wrap_2').css({'left':r_x + 'px'})
+				$('.wrap_3').css({'width':r_x + 'px'})
+				$('.wrap_3').css({'height':h - r_y + 'px'})
+				$('.wrap_3').css({'top':r_y + 'px'})
+				$('.wrap_4').css({'width':w - r_x + 'px'})
+				$('.wrap_4').css({'height':h - r_y + 'px'})
+				$('.wrap_4').css({'left':r_x + 'px'})
+				$('.wrap_4').css({'top':r_y + 'px'})
+
+
 				$('.side_1.wrap_1.extra').css({'width':r_x/2 + 'px'})
 				$('.side_1.wrap_1.extra').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
 				$('.side_1.wrap_1.extra').css({'height':(r_y/2) + 'px'})
+
+				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
+				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
+// 
+
 
 				$('.side_2.wrap_1.extra').css({'width':r_x/2 + 'px'})
 				$('.side_2.wrap_1.extra').css({'top':-1*((h - r_y))+(r_y/2) + 'px'})
 				$('.side_2.wrap_1.extra').css({'height':h - r_y + 'px'})
 				$('.side_2.wrap_1.extra').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateY('+ (h - r_y) + 'px)'})
-				
-				$('.wrap_2').css({'width':w - r_x + 'px'})
-				$('.wrap_2').css({'height':r_y + 'px'})
-				$('.wrap_2').css({'left':r_x + 'px'})
-				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
-
-				$('.wrap_3').css({'width':r_x + 'px'})
-				$('.wrap_3').css({'height':h - r_y + 'px'})
-				$('.wrap_3').css({'top':r_y + 'px'})
-				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
-
-
-				$('.wrap_4').css({'width':w - r_x + 'px'})
-				$('.wrap_4').css({'height':h - r_y + 'px'})
-				$('.wrap_4').css({'left':r_x + 'px'})
-				$('.wrap_4').css({'top':r_y + 'px'})
-				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
-				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
-				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
 
 				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ h-r_y + 'px)'})
 				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
-
-
+				// 
 
 				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (r_y) + 'px)'})
 				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+ (-1*h + r_y +r_x) + 'px)'})
 				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
-
 				$('.side_3.wrap_1').css({'width':(h - r_y) + 'px'})
 				$('.side_3.wrap_1.extra').css({'width':(h - r_y) + 'px'})
 				$('.side_3.wrap_1.extra').css({'height':(r_y/2) + 'px'})
@@ -375,19 +372,39 @@ $(document).ready(function(){
 				$('.side_3.wrap_3').css({'width':(h - r_y) + 'px'})
 				$('.side_3.wrap_4').css({'left':(h - r_y) + 'px'})
 				$('.side_3.wrap_4').css({'width':( r_y) + 'px'})
+
+
+
+
+
+				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
+
+				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
+
+
+				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+
+				
 				$('.side_3.wrap_2 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px)'})
-				console.log((r_y))
+
 				$('.side_3.wrap_4 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+
+
+				$('.side_2.wrap_1 .content').css({'transform':'translateX('+ -1*(w - r_x) + 'px)'})
+				$('.side_2.wrap_1.extra .content').css({'transform':'translateY('+ -1*r_y + 'px)'})
+				$('.side_2.wrap_2 .content').css({'transform':'translateX(0px)'})
+				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
 				if(window.location.hash === '#kr'){
 		    		$('.whole').css({'transform':'rotateX(0deg) rotateY(-90deg) translateZ('+-1*(w/2-r_y)+'px)'})
 		    	}
 			}else{
 				console.log('---------------------')
 				console.log(h)
-	  	if(isMobile){
-	  		$('.whole .side_1.wrap.wrap_1.extra .content .maintitle').css({'margin-top':this.scrollY+'px'})
-	  	}
-		var h = h*1.2
+			  		$('.whole .side_1.wrap.wrap_1.extra .content .maintitle').css({'margin-top':this.scrollY+'px'})
 				$('.side_1.wrap_1').css({'width':r_x + 'px'})
 				$('.side_1.wrap_1').css({'height':r_y/2 + 'px'})
 				$('.side_1.wrap_1').css({'top':r_y/2 + 'px'})
@@ -412,27 +429,29 @@ $(document).ready(function(){
 				$('.side_1.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
 
 				$('.side_2.wrap_1').css({'height':r_y + 'px'})
+				$('.side_2.wrap_1').css({'width':r_x + 'px'})
 				
 				$('.side_2.wrap_2').css({'height':r_y + 'px'})
+				$('.side_2.wrap_2').css({'transform':'rotateX(90deg) rotateY(0deg) translateZ('+(r_y-h) + 'px) rotateY( 180deg) translateX(-100%)'})
+				$('.side_2.wrap_2').css({'width':w - r_x + 'px'})
+				$('.side_2.wrap_2').css({'left':r_x + 'px'})
 
 				$('.side_2.wrap_3').css({'height':h - r_y + 'px'})
 				$('.side_2.wrap_3').css({'top':r_y + 'px'})
 				$('.side_2.wrap_3').css({'transform':'rotateX(90deg) rotateY(0deg) translateZ('+(r_y) + 'px)'})
-				$('.side_2.wrap_2').css({'transform':'rotateX(90deg) rotateY(0deg) translateZ('+(r_y-h) + 'px) rotateY( 180deg) translateX(-100%)'})
-				$('.side_2.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
+				$('.side_2.wrap_3').css({'width':r_x + 'px'})
 
 				$('.side_2.wrap_4').css({'height':h - r_y + 'px'})
 				$('.side_2.wrap_4').css({'top':r_y + 'px'})
-				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
-				$('.side_2.wrap_1').css({'width':r_x + 'px'})
-				
-				$('.side_2.wrap_2').css({'width':w - r_x + 'px'})
-				$('.side_2.wrap_2').css({'left':r_x + 'px'})
-
-				$('.side_2.wrap_3').css({'width':r_x + 'px'})
-
 				$('.side_2.wrap_4').css({'width':w - r_x + 'px'})
 				$('.side_2.wrap_4').css({'left':r_x + 'px'})
+
+
+				$('.side_2.wrap_1 .content').css({'transform':'translateX('+(-1*(w - r_x)) + 'px)'})
+				$('.side_2.wrap_2 .content').css({'transform':'translateX(0px)'})
+				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
+				$('.side_2.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)  scaleX(-1)'}) 
+
 
 
 				$('.side_3.wrap_1').css({'height':r_y + 'px'})
@@ -689,6 +708,7 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 	// overlay-mobile
 	$(window).scroll(function(){
 		if(isMobile){
+
 			$('.overlay').show()
 			clearTimeout(scrolltimeout)
 			scrolltimeout = setTimeout(function(){
