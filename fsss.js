@@ -195,6 +195,7 @@ $(document).ready(function(){
 	  	// $('.whole .side_1.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
 
 	  	$('.whole .side_3 .content .maintitle').css({'margin-top':this.scrollY+'px'})
+	  	$('.whole .side_1.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
 	  	$('.whole .side_3.wrap.wrap_1 .content .maintitle').css({'margin-top':'0px'})
 
 		if(orig_w> orig_h){
