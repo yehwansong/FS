@@ -42,14 +42,15 @@ a{text-decoration: none;}
 
 .maintitle a,
 .maintitle span {
-    width: 10vw;
+    width: 20vh;
     background: white;
     line-height: 1;
     margin-top: 0.2vh;
     margin-left: 1vh;
     font-size: 2.2vh;
     height: 4.3vh;
-    pointer-events: all
+    pointer-events: all;
+    border-radius: 0.2vh;
 }
 
 .titlebar {
@@ -160,7 +161,7 @@ body {
     text-transform: none;
     /* text-align: left !important; */
     top: 0;
-    padding-bottom: 0.5vh !important;
+    /*padding-bottom: 0.5vh !important;*/
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
@@ -236,7 +237,8 @@ body {
     text-align: center;
     margin-bottom: 1vh;
     margin-top: 1vh;
-    box-shadow: 0vh 0vh 0.25vh #636363
+    box-shadow: 0vh 0vh 0.25vh #636363;
+    border-radius: 0.2vh;
 }
 .people .title{
    margin-bottom: 0
@@ -251,7 +253,8 @@ body {
 }
 .logo_wrap .title {
     font-size: 1.5vh;
-    background: none
+    background: none;
+    box-shadow: none;
 }
 
 .left {
@@ -390,7 +393,7 @@ body {
     transform-origin: center center !important
 }
 .animate_lang {
-    transition: transform 0.4s;
+    transition: transform 0.25s linear;
 }
 .content.out>div,
 .content.out>span {
@@ -708,8 +711,8 @@ a:hover {
 }
 .logo_wrap {
     position: absolute;
-    bottom: 2.5vh;
-    padding-top: 2vh;
+    bottom: 0.5vh;
+    padding-top: 3vh;
     /* height: 3vh; */
     box-sizing: border-box;
     overflow: hidden;
@@ -780,16 +783,21 @@ a:hover {
     /*transform: translateX(-50%);*/
 }
 #apply_button {
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     text-decoration: none;
     border-bottom: 0;
     border-radius: 0.4vh;
     height: 4.8vh;
     padding-left: 2vh;
     padding-right: 2vh;
-    transition: 0.3s
+    transition: 0.3s;
+    text-align: center;
+    background: #ffa19f;
+}
+.side_3 #apply_button {
+    background: #ff2a28 !important; 
 }
 .side_3 #apply_button {
     background: #ff4446;
@@ -804,7 +812,7 @@ a:hover {
     height: 4.4vh !important;
     position: absolute;
     float: right;
-    line-height: 2.4 !important;
+    line-height: 2.3 !important;
     top: 0.1vh;
     right: 0;
     /* font-size: 2.5vh !important; */
@@ -1204,7 +1212,7 @@ letter-spacing: -0.2vw !important;
         font-size: 8vw!important;
         left: 10vw;
         top: 24vw;
-        text-decoration: none;
+        /*text-decoration: none;*/
         line-height: 1.1;
         color: #e30612;
     }

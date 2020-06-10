@@ -36,6 +36,14 @@ $(document).ready(function(){
 	}
 
 
+$('body').hover(function(){
+	console.log(';sldkfja;lkddddfj')
+})
+
+$('a').hover(function(){
+	console.log(';sldkfja;lkdfj')
+	// $('#contact_button_1').css({'text-decoration':'underline'})
+})
 
 
 	var trans_array = [0,0]
@@ -306,13 +314,13 @@ $(document).ready(function(){
 			w = orig_w
 			h = orig_h
 		}
-		  	if(imply_ani){
-		    	$('.whole').removeClass('animate_slow')
-		    	$('.whole').addClass('animate')
-				trans_array[0] = 0
-				trans_array[1] = 0
-		  		imply_ani = false
-		  	}
+	  	if(imply_ani){
+	    	$('.whole').removeClass('animate_slow')
+	    	$('.whole').addClass('animate')
+			trans_array[0] = 0
+			trans_array[1] = 0
+	  		imply_ani = false
+	  	}
 
 		    $('.whole').removeClass('animate')
 		    $('.whole').removeClass('animate_lang')
@@ -349,7 +357,6 @@ $(document).ready(function(){
 
 				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
 				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
-// 
 
 
 				$('.side_2.wrap_1.extra').css({'width':r_x/2 + 'px'})
@@ -380,17 +387,10 @@ $(document).ready(function(){
 
 
 				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
-
 				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
-
-
 				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
 
-
-
-				
 				$('.side_3.wrap_2 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px)'})
-
 				$('.side_3.wrap_4 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px) translateY('+(-1*r_y) + 'px)'})
 
 
@@ -400,12 +400,12 @@ $(document).ready(function(){
 				$('.side_2.wrap_1.extra .content').css({'transform':'translateY('+ -1*r_y + 'px)'})
 				$('.side_2.wrap_2 .content').css({'transform':'translateX(0px)'})
 				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
+				$('.side_2.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px) scaleX(-1)'}) 
 				if(window.location.hash === '#kr'){
 		    		$('.whole').css({'transform':'rotateX(0deg) rotateY(-90deg) translateZ('+-1*(w/2-r_y)+'px)'})
 		    	}
 			}else{
 				console.log('---------------------')
-				console.log(h)
 			  		$('.whole .side_1.wrap.wrap_1.extra .content .maintitle').css({'margin-top':this.scrollY+'px'})
 				$('.side_1.wrap_1').css({'width':r_x + 'px'})
 				$('.side_1.wrap_1').css({'height':r_y/2 + 'px'})
@@ -476,10 +476,10 @@ $(document).ready(function(){
 
 				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+ (-1*(w/2 -r_x)) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+ (-1*(w/2 -r_x)) + 'px)'})
-$('.side_1.wrap_1.extra').css({'top': '0'})
-$('.side_1.wrap_1.extra').css({'transform': 'rotateX( 0deg) rotateY( 0deg) translateZ('+-1*r_y/2+'px)'})
-$('.side_1.wrap_1.extra').css({'height': r_y/2})
-$('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) translateZ('+r_y/2+') translateX(100%)'})
+				$('.side_1.wrap_1.extra').css({'top': '0'})
+				$('.side_1.wrap_1.extra').css({'transform': 'rotateX( 0deg) rotateY( 0deg) translateZ('+-1*r_y/2+'px)'})
+				$('.side_1.wrap_1.extra').css({'height': r_y/2})
+				$('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) translateZ('+r_y/2+') translateX(100%)'})
 			}
 	}
 	function end(pos_x,pos_y){
@@ -508,7 +508,6 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 					$('.side_1.wrap_4').show()
 	}
 
-// 
 	function move(pos_x,pos_y){
 
 			if(!downed){
@@ -574,8 +573,6 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 			popup = false
 			$('.people_hover').removeClass('people_hover')
 			$('.popup').hide()
-
-				console.log('h1')
 			$('.gradient').css({'opacity':'0.8'})
 		    		$('.whole').removeClass('animate')
 					$('.gradient').removeClass('animate')
@@ -771,37 +768,74 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 				r_y = orig_h/2
 				$('.wrap_1').css({'width':r_x + 'px'})
 				$('.wrap_1').css({'height':r_y + 'px'})
-				
 				$('.wrap_2').css({'width':w - r_x + 'px'})
 				$('.wrap_2').css({'height':r_y + 'px'})
 				$('.wrap_2').css({'left':r_x + 'px'})
-				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
-
 				$('.wrap_3').css({'width':r_x + 'px'})
 				$('.wrap_3').css({'height':h - r_y + 'px'})
 				$('.wrap_3').css({'top':r_y + 'px'})
-				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
-
 				$('.wrap_4').css({'width':w - r_x + 'px'})
 				$('.wrap_4').css({'height':h - r_y + 'px'})
 				$('.wrap_4').css({'left':r_x + 'px'})
 				$('.wrap_4').css({'top':r_y + 'px'})
-				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+				$('.side_1.wrap_1.extra').css({'width':r_x/2 + 'px'})
+				$('.side_1.wrap_1.extra').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
+				$('.side_1.wrap_1.extra').css({'height':(r_y/2) + 'px'})
 
 				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
 				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
 
-				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ -1*(h - r_y) + 'px)'})
-				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
 
-				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
-				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (-1*h + r_y +r_x) + 'px)'})
+				$('.side_2.wrap_1.extra').css({'width':r_x/2 + 'px'})
+				$('.side_2.wrap_1.extra').css({'top':-1*((h - r_y))+(r_y/2) + 'px'})
+				$('.side_2.wrap_1.extra').css({'height':h - r_y + 'px'})
+				$('.side_2.wrap_1.extra').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateY('+ (h - r_y) + 'px)'})
+
+				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ h-r_y + 'px)'})
+				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
+				// 
+
+				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (r_y) + 'px)'})
+				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+ (-1*h + r_y +r_x) + 'px)'})
 				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
+				$('.side_3.wrap_1').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_1.extra').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_1.extra').css({'height':(r_y/2) + 'px'})
+				$('.side_3.wrap_1.extra').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+((r_y)-h + r_x/2) + 'px)'})
+				$('.side_3.wrap_2').css({'width':( r_y) + 'px'})
+				$('.side_3.wrap_2').css({'left':(h - r_y) + 'px'})
+				$('.side_3.wrap_3').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_4').css({'left':(h - r_y) + 'px'})
+				$('.side_3.wrap_4').css({'width':( r_y) + 'px'})
+
+
+
+
+
+				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
+				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
+				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+				$('.side_3.wrap_2 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px)'})
+				$('.side_3.wrap_4 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+
+
+				$('.side_2.wrap_1 .content').css({'transform':'translateX('+ -1*(w - r_x) + 'px)'})
+				$('.side_2.wrap_1.extra .content').css({'transform':'translateY('+ -1*r_y + 'px)'})
+				$('.side_2.wrap_2 .content').css({'transform':'translateX(0px)'})
+				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
+				$('.side_2.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px) scaleX(-1)'}) 
+
 			$('.whole').css({'transform':'scale(0.7) rotateX(10deg) rotateY(-45deg)'})
 			setTimeout(function(){
-			$('.whole').css({'transform':'rotateY(0deg)'})
-			}, 500)
+				r_y = orig_h/2
+			$('.whole').css({'transform':'rotateY(0deg) translateZ('+-1*(w/2-r_y)+'px)'})
+			}, 300)
 			$('.lang_kr').show()
 			$('.lang_en').hide()
 		}else{
@@ -821,37 +855,74 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 				r_y = orig_h/2
 				$('.wrap_1').css({'width':r_x + 'px'})
 				$('.wrap_1').css({'height':r_y + 'px'})
-				
 				$('.wrap_2').css({'width':w - r_x + 'px'})
 				$('.wrap_2').css({'height':r_y + 'px'})
 				$('.wrap_2').css({'left':r_x + 'px'})
-				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
-
 				$('.wrap_3').css({'width':r_x + 'px'})
 				$('.wrap_3').css({'height':h - r_y + 'px'})
 				$('.wrap_3').css({'top':r_y + 'px'})
-				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
-
 				$('.wrap_4').css({'width':w - r_x + 'px'})
 				$('.wrap_4').css({'height':h - r_y + 'px'})
 				$('.wrap_4').css({'left':r_x + 'px'})
 				$('.wrap_4').css({'top':r_y + 'px'})
-				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+				$('.side_1.wrap_1.extra').css({'width':r_x/2 + 'px'})
+				$('.side_1.wrap_1.extra').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
+				$('.side_1.wrap_1.extra').css({'height':(r_y/2) + 'px'})
 
 				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
 				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
 
-				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ -1*(h - r_y) + 'px)'})
-				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
 
-				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
-				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (-1*h + r_y +r_x) + 'px)'})
+				$('.side_2.wrap_1.extra').css({'width':r_x/2 + 'px'})
+				$('.side_2.wrap_1.extra').css({'top':-1*((h - r_y))+(r_y/2) + 'px'})
+				$('.side_2.wrap_1.extra').css({'height':h - r_y + 'px'})
+				$('.side_2.wrap_1.extra').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateY('+ (h - r_y) + 'px)'})
+
+				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ h-r_y + 'px)'})
+				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
+				// 
+
+				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (r_y) + 'px)'})
+				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+ (-1*h + r_y +r_x) + 'px)'})
 				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
+				$('.side_3.wrap_1').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_1.extra').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_1.extra').css({'height':(r_y/2) + 'px'})
+				$('.side_3.wrap_1.extra').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+((r_y)-h + r_x/2) + 'px)'})
+				$('.side_3.wrap_2').css({'width':( r_y) + 'px'})
+				$('.side_3.wrap_2').css({'left':(h - r_y) + 'px'})
+				$('.side_3.wrap_3').css({'width':(h - r_y) + 'px'})
+				$('.side_3.wrap_4').css({'left':(h - r_y) + 'px'})
+				$('.side_3.wrap_4').css({'width':( r_y) + 'px'})
+
+
+
+
+
+				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
+				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
+				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+				$('.side_3.wrap_2 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px)'})
+				$('.side_3.wrap_4 .content').css({'transform':'translateX('+(-1*(h - r_y)) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+
+
+
+				$('.side_2.wrap_1 .content').css({'transform':'translateX('+ -1*(w - r_x) + 'px)'})
+				$('.side_2.wrap_1.extra .content').css({'transform':'translateY('+ -1*r_y + 'px)'})
+				$('.side_2.wrap_2 .content').css({'transform':'translateX(0px)'})
+				$('.side_2.wrap_4 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'})
+				$('.side_2.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px) scaleX(-1)'}) 
+
 			$('.whole').css({'transform':'scale(0.7) rotateX(-10deg) rotateY(-45deg)'})
 			setTimeout(function(){
-				$('.whole').css({'transform':'rotateY(-90deg)'})
-			}, 500)
+				r_y = orig_h/2
+				$('.whole').css({'transform':'rotateY(-90deg) translateZ('+-1*(w/2-r_y)+'px)'})
+			}, 300)
 			console.log('a;dfsljlaksdj')
 				$('.content_wrapper_kr>.content').css({'transform':'translateX(0px)'})
 			 	trans_array_pre = [0,-90]
