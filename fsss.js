@@ -315,6 +315,7 @@ $(document).ready(function(){
 		  	}
 
 		    $('.whole').removeClass('animate')
+		    $('.whole').removeClass('animate_lang')
 		    $('.whole').removeClass('animate_slow')
 			$('.gradient').removeClass('animate')
 			$('.gradient').removeClass('animate_slow')
@@ -765,23 +766,7 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 			$('#content_wrapper').show()
 			$('#content_wrapper_kr').hide()
 			location.replace(window.location.href.split('#')[0]+'#en');
-			$('.whole').addClass('animate')
-			$('.whole').css({'transform':'rotateY(0)'})
-			$('.lang_kr').show()
-			$('.lang_en').hide()
-		}else{
-			location.replace(window.location.href.split('#')[0]+'#en_m');
-			location.reload();
-		}
-	})
-	$('.lang_wrap .lang_kr').click(function(){
-		if(!isMobile){
-			$('#content_wrapper').hide()
-			$('#content_wrapper_kr').show()
-			$('.lang_kr').hide()
-			$('.lang_en').show()
-			location.replace(window.location.href.split('#')[0]+'#kr');
-			$('.whole').addClass('animate')
+			$('.whole').addClass('animate_lang')
 				r_x = orig_w/2
 				r_y = orig_h/2
 				$('.wrap_1').css({'width':r_x + 'px'})
@@ -813,7 +798,61 @@ $('.side_2.wrap_1.extra').css({'transform': 'rotateX(90deg) rotateY( 180deg) tra
 				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (-1*h + r_y +r_x) + 'px)'})
 				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
 				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
+			$('.whole').css({'transform':'scale(0.7) rotateX(10deg) rotateY(-45deg)'})
+			setTimeout(function(){
+			$('.whole').css({'transform':'rotateY(0deg)'})
+			}, 500)
+			$('.lang_kr').show()
+			$('.lang_en').hide()
+		}else{
+			location.replace(window.location.href.split('#')[0]+'#en_m');
+			location.reload();
+		}
+	})
+	$('.lang_wrap .lang_kr').click(function(){
+		if(!isMobile){
+			$('#content_wrapper').hide()
+			$('#content_wrapper_kr').show()
+			$('.lang_kr').hide()
+			$('.lang_en').show()
+			location.replace(window.location.href.split('#')[0]+'#kr');
+			$('.whole').addClass('animate_lang')
+				r_x = orig_w/2
+				r_y = orig_h/2
+				$('.wrap_1').css({'width':r_x + 'px'})
+				$('.wrap_1').css({'height':r_y + 'px'})
+				
+				$('.wrap_2').css({'width':w - r_x + 'px'})
+				$('.wrap_2').css({'height':r_y + 'px'})
+				$('.wrap_2').css({'left':r_x + 'px'})
+				$('.wrap_2 .content').css({'transform':'translateX('+(-1*r_x) + 'px)'})
+
+				$('.wrap_3').css({'width':r_x + 'px'})
+				$('.wrap_3').css({'height':h - r_y + 'px'})
+				$('.wrap_3').css({'top':r_y + 'px'})
+				$('.wrap_3 .content').css({'transform':'translateY('+(-1*r_y) + 'px)'}) 
+
+				$('.wrap_4').css({'width':w - r_x + 'px'})
+				$('.wrap_4').css({'height':h - r_y + 'px'})
+				$('.wrap_4').css({'left':r_x + 'px'})
+				$('.wrap_4').css({'top':r_y + 'px'})
+				$('.wrap_4 .content').css({'transform':'translateX('+(-1*r_x) + 'px) translateY('+(-1*r_y) + 'px)'})
+
+				$('.side_1.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ (h - r_y) + 'px)'})
+				$('.side_1.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 0deg) translateZ('+ -1*r_y + 'px)'})
+
+				$('.side_2.wrap_2').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ -1*(h - r_y) + 'px)'})
+				$('.side_2.wrap_3').css({'transform':'rotateX( 90deg)  rotateY( 0deg) translateZ('+ r_y + 'px)'})
+
+				$('.side_3.wrap_1').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
+				$('.side_3.wrap_2').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  (-1*h + r_y +r_x) + 'px)'})
+				$('.side_3.wrap_3').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((-1*h + r_y +r_x)-r_x) + 'px)'})
+				$('.side_3.wrap_4').css({'transform':'rotateX( 0deg)  rotateY( 90deg) translateZ('+  ((r_y +r_x)-r_x) + 'px)'})
+			$('.whole').css({'transform':'scale(0.7) rotateX(-10deg) rotateY(-45deg)'})
+			setTimeout(function(){
 				$('.whole').css({'transform':'rotateY(-90deg)'})
+			}, 500)
+			console.log('a;dfsljlaksdj')
 				$('.content_wrapper_kr>.content').css({'transform':'translateX(0px)'})
 			 	trans_array_pre = [0,-90]
 		}else{
