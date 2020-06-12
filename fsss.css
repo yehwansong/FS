@@ -443,6 +443,9 @@ body {
     padding-top: 1vw;
     padding-top: 5vh;
 }
+.side_2 .content {
+    background: #fbd4c7;
+}
 .circle {
     width: 3vh;
     height: 3vh;
@@ -490,6 +493,7 @@ body {
     background-image: url('bg_1.png') !important;
     background-size: contain !important;
     background-position: center !important;
+    background-repeat: no-repeat;
     height: 100vw;
 }
 .side_2 .content *,
